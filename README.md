@@ -1,2 +1,2 @@
 # Codewars
-my codewars solutions
+my codewars solutions based on their rankings
