@@ -1,0 +1,9 @@
+#include <vector>
+
+int sum(std::vector<int> nums) {
+  int sum = 0;
+  for (unsigned long i = 0; i < nums.size(); i++){
+    sum += nums[i];
+  }
+  return sum;
+}
