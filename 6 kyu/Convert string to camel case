@@ -1,0 +1,24 @@
+import java.lang.StringBuilder;
+
+class Solution{
+  static String toCamelCase(String s){
+    StringBuilder result = new StringBuilder();
+    
+    // Loop through the input string
+    for (int i = 0; i < s.length(); i++) {
+      char currentChar = s.charAt(i);
+      
+      // If the current character is a dash or underscore, convert the next character to uppercase
+      if (currentChar == '-' || currentChar == '_') {
+        i++;
+        if (i < s.length()) {
+          result.append(Character.toUpperCase(s.charAt(i)));
+        }
+      } else {
+        result.append(currentChar);
+      }
+    }
+    
+    return result.toString();
+  }
+}
