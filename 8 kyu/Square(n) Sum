@@ -1,0 +1,13 @@
+#include <vector>
+#include <cmath>
+
+int square_sum(const std::vector<int>& numbers){
+  int sum = 0;
+  for (unsigned long i = 0; i < numbers.size(); i++){
+    int num = numbers.at(i);
+    int square = pow(num, 2);
+    sum += square;
+  };
+  return sum;
+  return -1;
+}
