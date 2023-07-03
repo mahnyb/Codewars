@@ -1,0 +1,21 @@
+#include <cmath>
+using namespace std;
+
+int count_digit(int x){
+  return (log10(x) + 1); // formula to get the number of digits in an int
+}
+bool narcissistic(int value){
+  int tempval = value;
+  int digitcount = count_digit(tempval);
+  int sum = 0;
+  int num;
+  while(tempval != 0){
+    num = tempval % 10;
+    tempval /= 10;
+    sum += pow(num, digitcount);
+  }
+  if (sum == value){
+    return true;
+  }
+  else return false;
+}
