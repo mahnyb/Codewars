@@ -1,0 +1,39 @@
+public class TenMinWalk {
+  public static boolean isValid(char[] walk) {
+    // check if the walk takes exactly ten minutes
+    if (walk.length != 10) {
+      return false;
+    }
+    
+    // count the number of steps in each direction
+    int northSteps = 0;
+    int southSteps = 0;
+    int eastSteps = 0;
+    int westSteps = 0;
+    
+    for (char direction : walk) {
+      switch (direction) {
+        case 'n':
+          northSteps++;
+          break;
+        case 's':
+          southSteps++;
+          break;
+        case 'e':
+          eastSteps++;
+          break;
+        case 'w':
+          westSteps++;
+          break;
+      }
+    }
+    
+    // check if the walk returns to the starting point
+    if (northSteps == southSteps && eastSteps == westSteps){
+      return true;
+    } 
+    else {
+      return false;
+    }
+  }
+}
