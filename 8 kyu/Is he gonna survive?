@@ -1,0 +1,7 @@
+bool hero(int bullets, int dragons) {
+  
+  if (dragons == 0 || (bullets / dragons) >= 2){
+    return true;
+  }
+  else return false;
+}
